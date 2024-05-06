@@ -352,9 +352,19 @@
 
 .mundo {
 	position: relative;
+	padding: 40px 0px;
+	padding-top: 80px;
+	overflow: hidden;
+	.bdb {
+		position: absolute;
+		bottom: 15px;
+	}
+	.bdc {
+		position: absolute;
+		top: 4px;
+		z-index: 4;
+	}
 	&_container {
-		background: url("../assets/projetos.png");
-
 		.slick-dots {
 			display: flex;
 			justify-content: center;
@@ -397,6 +407,7 @@
 	}
 	&_card {
 		background: url("../assets/mundo-imh.png");
+		mask-image: url("../assets/curva.svg");
 		height: 696px;
 		background-repeat: no-repeat;
 		background-size: cover;
