@@ -26,12 +26,15 @@
 				font-size: 16px;
 				line-height: 19px;
 				color: #fff;
+				font-family: "Poppins", sans-serif;
 			}
 		}
 		.form-inline {
 			.btn {
 				background-color: #fff;
 				border: none;
+				font-family: "Poppins", sans-serif;
+
 				border-radius: 50%;
 				width: 46px;
 				height: 46px;
@@ -56,6 +59,9 @@
 	}
 	&_title {
 		margin-bottom: 32px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 800;
 	}
 	&_column {
 		color: #fff;
@@ -96,7 +102,9 @@
 		}
 		.redes {
 			text-align: center;
+			font-style: italic;
 			margin: 32px 0 24px;
+			font-weight: 300;
 			&_container {
 				gap: 20px;
 				justify-content: center;
@@ -110,9 +118,11 @@
 		p {
 			margin-bottom: 0;
 			font-weight: 600;
+			font-family: "Poppins", sans-serif;
 		}
 		a {
 			font-weight: 500;
+			font-family: "Poppins", sans-serif;
 		}
 		margin-bottom: 20px;
 	}

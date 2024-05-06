@@ -23,6 +23,8 @@
 	border: 1px solid transparent;
 	display: inline-block;
 	font-weight: 400;
+	font-family: "Poppins", sans-serif;
+
 	font-size: 22px;
 	line-height: 26px;
 	padding: 6px 20px;
@@ -61,7 +63,9 @@
 	}
 	&_title {
 		color: #1e67a9;
-		font-weight: 400;
+		font-weight: 600;
+		font-family: "Poppins", sans-serif;
+
 		font-size: 42px;
 		line-height: 51px;
 		margin-top: 48px;
@@ -70,10 +74,12 @@
 		}
 	}
 	&_desc {
+		font-family: "Poppins", sans-serif;
+
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 600;
 		line-height: 19px;
-		max-width: 800px;
+		max-width: 860px;
 		margin: 0px auto 68px;
 		color: #1e67a9;
 		text-align: center;
@@ -116,9 +122,13 @@
 			transition: all 0.3s ease-in;
 			h4 {
 				font-weight: 600;
+				font-family: "Poppins", sans-serif;
+
 				font-size: 18px;
 				line-height: 22px;
 				margin-bottom: 16px;
+			}
+			p {
 			}
 
 			.button {
@@ -170,6 +180,8 @@
 	}
 	&_btn {
 		font-weight: 400;
+		font-family: "Poppins", sans-serif;
+
 		font-size: 16px;
 		line-height: 19px;
 		margin-top: 80px;
@@ -182,7 +194,9 @@
 			border: 1px solid #1e67a9;
 			padding: 6px 32px;
 			display: flex;
-			font-weight: 400;
+			font-weight: 600;
+			font-family: "Poppins", sans-serif;
+
 			font-size: 16px;
 			line-height: 19px;
 			border-radius: 33px;
@@ -427,9 +441,13 @@
 		}
 		.left-column {
 			.mundo_card--title {
+				font-family: "Poppins", sans-serif;
+				font-weight: 600;
 				font-size: 55px;
 				line-height: 50px;
 				span {
+					font-family: "Poppins", sans-serif;
+
 					font-size: 96px;
 					line-height: 88px;
 				}
@@ -447,6 +465,8 @@
 			color: #fff;
 			.mundo_card--sub-title {
 				font-weight: bold;
+				font-family: "Poppins", sans-serif;
+
 				font-size: 16px;
 				line-height: 19px;
 				margin-bottom: 24px;
@@ -492,7 +512,8 @@
 	&_container {
 		.tag {
 			display: inline-block;
-			width: 205px;
+			width: 235px;
+			font-weight: 400;
 		}
 		display: flex;
 		flex-direction: column;
@@ -502,9 +523,11 @@
 		margin: 0 auto;
 	}
 	&__title {
+		font-family: "Poppins", sans-serif;
+
 		font-size: 42px;
 		line-height: 51px;
-		font-weight: 400;
+		font-weight: 600;
 		margin-top: 28px;
 		color: #1e67a9;
 	}
@@ -544,9 +567,11 @@
 		transition: all 0.3s ease-in;
 		.category {
 			border: 1px solid #fff;
-			padding: 8px 12px;
+			padding: 4px 12px;
 			position: absolute;
-			font-weight: 400;
+			font-weight: 600;
+			font-family: "Poppins", sans-serif;
+
 			font-size: 14px;
 			line-height: 17px;
 			background-color: rgba(26, 169, 249, 0.73);
@@ -575,7 +600,7 @@
 			margin-top: auto;
 			position: relative;
 			transition: all 0.3s ease-in;
-
+			font-weight: 600;
 			z-index: 2;
 		}
 		&:hover {
@@ -603,7 +628,7 @@
 		padding-top: 87px;
 		justify-content: space-between;
 		.left-column {
-			max-width: 584px;
+			max-width: 629px;
 			position: relative;
 			&::before {
 				content: url("../assets/bd-news.svg");
@@ -619,12 +644,16 @@
 						border-color: rgba(30, 103, 169, 0.1);
 						color: #1e67a9;
 						font-weight: 400;
+						font-family: "Poppins", sans-serif;
+
 						font-size: 16px;
 						height: 39px;
 						line-height: 19px;
 						&::placeholder {
 							color: #1e67a9;
 							font-weight: 400;
+							font-family: "Poppins", sans-serif;
+
 							font-size: 16px;
 							line-height: 19px;
 						}
@@ -640,11 +669,15 @@
 							color: #1e67a9;
 							font-weight: 400;
 							margin: 0 !important;
+							font-family: "Poppins", sans-serif;
+
 							font-size: 16px;
 							line-height: 19px;
 							a {
 								color: #1e67a9;
 								font-weight: 500;
+								font-family: "Poppins", sans-serif;
+
 								font-size: 16px;
 								line-height: 19px;
 							}
@@ -661,6 +694,8 @@
 		}
 	}
 	&__title {
+		font-family: "Poppins", sans-serif;
+		font-weight: 600;
 		font-size: 76px;
 		line-height: 73px;
 		color: #1e67a9;
@@ -669,6 +704,8 @@
 	&_desc {
 		color: #1e67a9;
 		font-weight: 400;
+		font-family: "Poppins", sans-serif;
+		margin: 0;
 		font-size: 16px;
 		line-height: 19px;
 	}
