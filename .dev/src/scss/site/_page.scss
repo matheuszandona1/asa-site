@@ -1,5 +1,5 @@
 .hero {
-	background: url("../assets/capao.png");
+	background: url("../assets/capao.png?as=webp");
 	height: 935px;
 	padding-top: 300px;
 	position: relative;
@@ -32,23 +32,23 @@
 	font-style: italic;
 }
 .bg-product {
-	background: url("../assets/bg-products.png");
+	background: url("../assets/bg-products.png?as=webp");
 }
 .product {
 	margin-top: -100px;
 	padding: 54px 0 84px;
-	background: url("../assets/fundo-azul.png");
+	background: url("../assets/fundo-azul.png?as=webp");
 	background-size: cover;
 	padding-top: 200px;
 	position: relative;
 	&::before {
-		content: url("../assets/enfeiteh-l.png");
+		content: url("../assets/enfeiteh-l.png?as=webp");
 		position: absolute;
 		left: 0;
 		top: -50px;
 	}
 	&::after {
-		content: url("../assets/enfeiteh-r.png");
+		content: url("../assets/enfeiteh-r.png?as=webp");
 		position: absolute;
 		right: 0;
 		top: -50px;
@@ -420,7 +420,7 @@
 		}
 	}
 	&_card {
-		background: url("../assets/mundo-imh.png");
+		background: url("../assets/mundo-imh.png?as=webp");
 		mask-image: url("../assets/curva.svg");
 		height: 696px;
 		background-repeat: no-repeat;
@@ -553,7 +553,7 @@
 	}
 	&__card {
 		max-width: 364px;
-		background: url("../assets/blog-card.png");
+		background: url("../assets/blog-card.png?as=webp");
 		border-radius: 20px;
 
 		height: 441px;
@@ -619,7 +619,7 @@
 
 .news {
 	height: 401px;
-	background: url("../assets/fundo-news.png");
+	background: url("../assets/fundo-news.png?as=webp");
 	position: relative;
 	&__container {
 		display: flex;

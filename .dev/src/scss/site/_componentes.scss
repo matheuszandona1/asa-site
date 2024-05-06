@@ -52,6 +52,22 @@
 	padding: 80px 0px;
 	padding-top: 160px;
 	margin-top: -80px;
+	position: relative;
+	overflow: hidden;
+	&::before {
+		content: url("../assets/enfeiteh-l.png");
+		position: absolute;
+		right: 0;
+		bottom: -200px;
+		transform: rotate(180deg);
+	}
+	&::after {
+		content: url("../assets/enfeiteh-r.png");
+		position: absolute;
+		left: 0;
+		bottom: -200px;
+		transform: rotate(180deg);
+	}
 	&__container {
 		display: flex;
 		gap: 80px;
