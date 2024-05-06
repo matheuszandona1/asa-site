@@ -1,0 +1,119 @@
+.header {
+	background: url("../assets/nav-bg.png");
+	padding: 0 44px;
+	padding-top: 12px;
+	height: 107px;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+	position: absolute;
+	.navbar {
+		padding: 0;
+		&-nav {
+			width: 100%;
+			justify-content: center;
+			gap: 56px;
+		}
+		&-brand {
+			img {
+				max-width: 84px;
+			}
+		}
+
+		.nav {
+			&-link {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
+				color: #fff;
+			}
+		}
+		.form-inline {
+			.btn {
+				background-color: #fff;
+				border: none;
+				border-radius: 50%;
+				width: 46px;
+				height: 46px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
+
+.footer {
+	background: url("../assets/footer.png") no-repeat;
+	background-size: cover;
+	padding: 80px 0px;
+	padding-top: 160px;
+	margin-top: -80px;
+	&__container {
+		display: flex;
+		gap: 80px;
+		@include container;
+	}
+	&_title {
+		margin-bottom: 32px;
+	}
+	&_column {
+		color: #fff;
+		max-width: 250px;
+		&.special {
+			max-width: 300px;
+			ul {
+				justify-content: space-between;
+				margin: 0;
+				position: relative;
+				li {
+					width: 115px;
+				}
+				&:after {
+					position: absolute;
+					content: "";
+					width: 2px;
+					height: 110px;
+					background-color: #fff;
+					left: 0;
+					right: 0px;
+					margin: 0 auto;
+				}
+			}
+		}
+		ul {
+			list-style: none;
+			display: flex;
+			padding: 0;
+			flex-wrap: wrap;
+		}
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 19px;
+		}
+		.redes {
+			text-align: center;
+			margin: 32px 0 24px;
+			&_container {
+				gap: 20px;
+				justify-content: center;
+			}
+		}
+	}
+	&_menu {
+		gap: 20px 56px;
+	}
+	&_contact {
+		p {
+			margin-bottom: 0;
+			font-weight: 600;
+		}
+		a {
+			font-weight: 500;
+		}
+		margin-bottom: 20px;
+	}
+}
