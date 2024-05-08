@@ -35,6 +35,8 @@
 				text-align: center;
 				max-width: 211px;
 				display: block;
+				background: transparent;
+				color: #fff;
 			}
 			@include container;
 		}
@@ -66,6 +68,200 @@
 				img {
 					max-width: 100%;
 					height: auto;
+				}
+			}
+		}
+	}
+	&.higiene {
+		.hero {
+			background: url("../assets/fundo-marcas-hg.png");
+			&::before {
+				content: url("../assets/detalhes-marcas-bf-hg.png");
+			}
+			&::after {
+				content: url("../assets/detalhes-marcas-af-hg.png");
+			}
+		}
+		.video {
+			.left-column {
+				.d-title {
+					color: #562579;
+				}
+				.d-text {
+					color: #8f4bc0;
+				}
+				.button {
+					background-color: #8f4bc0;
+				}
+			}
+			.right-column {
+				&::before {
+					content: url("../assets/curva-vd-hg.svg");
+				}
+			}
+		}
+		.marcas {
+			background-color: #fbf3ff;
+			.d-title {
+				color: #772cae;
+			}
+			&_container {
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+			&_content {
+				background-color: #fbf3ff;
+				border: 1px solid #bd87e3;
+				max-width: 500px;
+				margin: 82px auto 260px;
+			}
+
+			&_holder {
+				.d-text {
+					color: #772cae;
+				}
+				.info {
+					.tag {
+						color: #bd87e3;
+						background-color: #fff;
+						border: 1px solid #772cae;
+					}
+				}
+			}
+			.wall {
+				background-color: #914cc1;
+				img {
+					margin-right: 0;
+				}
+				&_holder {
+					border-color: #772cae;
+				}
+				&-obj {
+					top: -20px;
+
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+	&.limpeza {
+		.hero {
+			background: url("../assets/fundo-marcas-lp.png");
+			&::before {
+				content: url("../assets/detalhes-marcas-bf-lp.png");
+			}
+			&::after {
+				content: url("../assets/detalhes-marcas-af-lp.png");
+			}
+			&_content {
+				.left-column {
+					margin-top: -77px;
+					@media (min-width: 1800px) {
+						margin-top: -55px;
+					}
+				}
+				.right-column {
+					margin-top: -147px;
+					@media (min-width: 1800px) {
+						margin-top: -110px;
+					}
+				}
+			}
+		}
+		.video {
+			.left-column {
+				.d-title {
+					color: #1e67a9;
+				}
+				.d-text {
+					color: #1e67a9;
+				}
+				.button {
+					background-color: #1e67a9;
+				}
+			}
+			.right-column {
+				&::before {
+					content: url("../assets/curva-vd-lp.svg");
+				}
+				&::after {
+					content: url("../assets/bolhas.png");
+				}
+			}
+		}
+		.marcas {
+			background-color: #fbf3ff;
+			.d-title {
+				color: #1e67a9;
+			}
+			&_container {
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+			&_content {
+				background-color: #fbf3ff;
+				border: 1px solid #1eade2;
+				max-width: 1000px;
+				margin: 82px auto 260px;
+			}
+			&_card {
+				padding: 10px 20px;
+				svg {
+					max-width: 100%;
+					height: auto;
+				}
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			&_holder {
+				.d-text {
+					color: #1e67a9;
+				}
+				.info {
+					.tag {
+						color: #3980c0;
+						background-color: #fff;
+						border: 1px solid #1e67a9;
+					}
+				}
+				&.right {
+					.wall {
+						img {
+							margin-bottom: 0px;
+							max-width: 100%;
+						}
+						&-obj {
+							left: -50px;
+							top: -60px !important;
+						}
+					}
+				}
+			}
+			.wall {
+				background-color: #2751cd;
+				img {
+					margin-right: 0;
+					max-width: 100%;
+					margin-bottom: -30px;
+				}
+				&_holder {
+					border-color: #008bec;
+				}
+				&-obj {
+					top: -20px;
+					max-width: 550px;
+					left: -150px;
+					right: 0;
+					margin: 0 auto;
 				}
 			}
 		}
@@ -148,7 +344,7 @@
 				content: url("../assets/curva-vd.png");
 				position: absolute;
 				left: -35px;
-				bottom: -25px;
+				bottom: 50px;
 				transform: scale(0.6);
 			}
 			&::after {
@@ -172,7 +368,7 @@
 	overflow: hidden;
 	.d-title {
 		text-align: center;
-		font-size: 52px;
+		font-size: 40px;
 		max-width: 660px;
 		margin: 0 auto;
 		line-height: 63px;
@@ -237,15 +433,22 @@
 		margin-bottom: 120px;
 		position: relative;
 		&.right {
+			.wall {
+			}
+		}
+		&.right {
 			justify-content: end;
 			.wall {
 				border-radius: 232px 0px 0px 232px;
+				img {
+					max-width: 100%;
+				}
 				&-obj {
-					max-width: 400px;
+					max-width: 360px;
 					left: 0;
-					right: 0;
+					right: -50px !important;
 					margin: 0 auto;
-					top: -70px;
+					top: 30px !important;
 				}
 				&_holder {
 					border: 1px solid #67b442;
@@ -274,9 +477,12 @@
 				margin-bottom: 32px;
 			}
 			.button--container {
+				padding: 0 50px;
 				.tag {
 					padding: 8px 20px;
 					width: 100%;
+					font-size: 16px;
+					line-height: 19px;
 					text-align: center;
 					display: flex;
 					justify-content: space-between;
@@ -300,9 +506,9 @@
 			align-items: end;
 			img {
 				margin-right: -5px;
-				max-width: 100%;
+				max-width: 90%;
 				height: auto;
-				margin-top: -100px;
+				margin-bottom: -50px;
 				display: block;
 				z-index: 3;
 			}
