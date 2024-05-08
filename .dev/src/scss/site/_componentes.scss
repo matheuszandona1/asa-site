@@ -56,7 +56,7 @@
 }
 
 .footer {
-	background: url("../assets/footer.png") no-repeat;
+	background: url("../assets/footer.png?as=webp") no-repeat;
 	background-size: cover;
 	padding: 80px 0px;
 	padding-top: 160px;
@@ -64,14 +64,14 @@
 	position: relative;
 	overflow: hidden;
 	&::before {
-		content: url("../assets/enfeiteh-l.png");
+		content: url("../assets/enfeiteh-l.png?as=webp");
 		position: absolute;
 		right: 0;
 		bottom: -200px;
 		transform: rotate(180deg);
 	}
 	&::after {
-		content: url("../assets/enfeiteh-r.png");
+		content: url("../assets/enfeiteh-r.png?as=webp");
 		position: absolute;
 		left: 0;
 		bottom: -200px;
