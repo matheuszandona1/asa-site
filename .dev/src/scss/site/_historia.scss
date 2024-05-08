@@ -1,0 +1,309 @@
+.page--historia {
+	.hero {
+		position: relative;
+		.curva {
+			max-width: 100%;
+			height: auto;
+			background-color: #fff;
+		}
+		.detalhe-aft {
+			position: absolute;
+			right: 0;
+			top: 0;
+			max-width: 300px;
+			@media (min-width: 1366px) {
+				max-width: 400px;
+			}
+			@media (min-width: 1512px) {
+				max-width: 500px;
+			}
+			@media (min-width: 1612px) {
+				max-width: 600px;
+			}
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		.detalhe-bf {
+			position: absolute;
+			left: 0;
+			bottom: -50px;
+		}
+		background: #fff;
+		// background-size: 100%;
+		// background-repeat: no-repeat;
+		padding-top: 200px;
+		height: 85vh;
+		.circle-hero,
+		.star-hero {
+			position: absolute;
+		}
+		.star-hero {
+			right: 0;
+			bottom: 70px;
+		}
+		.circle-hero {
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+			display: inline-block;
+			width: 223px;
+			height: 223px;
+			top: 100px;
+		}
+
+		&_container {
+			@include container;
+			display: flex;
+			gap: 120px;
+			overflow: unset;
+			@media (max-width: 1366px) {
+				gap: 0;
+				justify-content: space-between;
+			}
+			.left-column {
+				max-width: 664px;
+				@media (max-width: 1366px) {
+					max-width: 627px;
+				}
+				.tag {
+					margin-bottom: 45px;
+				}
+
+				.hero_title {
+					@include general-title;
+					font-size: 77px;
+					line-height: 73px;
+					color: #1659a3;
+					margin-bottom: 32px;
+					@media (max-width: 1366px) {
+						font-size: 66px;
+					}
+				}
+				.d-text {
+					color: #1659a3;
+				}
+			}
+
+			.right-column {
+				display: flex;
+				width: 100%;
+				max-width: 456px;
+				gap: 16px;
+				flex-wrap: wrap;
+				height: 364px;
+				padding-top: 100px;
+				position: relative;
+
+				.hero_card {
+					max-width: 220px;
+					width: 100%;
+					padding: 20px;
+					border-radius: 0px 0px 0px 24px;
+					background: url("../assets/ca-hero-ht.svg");
+					background-repeat: no-repeat;
+					height: 174px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					color: #fff;
+					.text {
+						@include text;
+						text-align: center;
+						font-size: 42px;
+						font-weight: bold;
+						margin-top: 10px;
+					}
+					&:first-child {
+						position: relative;
+						&::after {
+							content: url("../assets/anos-hero-ht.svg");
+							position: absolute;
+							right: -32px;
+							top: -30px;
+							z-index: 2;
+						}
+					}
+					&:nth-child(2) {
+						background: url("../assets/cl-hero-hist.svg");
+						position: relative;
+						border-radius: 12px 24px 12px 24px;
+						&::after {
+							content: url("../assets/marcas-hero-ht.svg");
+							position: absolute;
+							right: -25px;
+							top: -20px;
+						}
+					}
+					&:nth-child(3) {
+						background: url("../assets/cv-hero-ht.svg");
+						.text {
+							font-size: 24px;
+						}
+						border-radius: 24px 12px 12px 12px;
+					}
+					&:nth-child(4) {
+						background: url("../assets/cac-hero-ht.svg");
+						.number {
+							position: relative;
+							z-index: 2;
+						}
+						.text {
+							font-size: 24px;
+							position: relative;
+							z-index: 2;
+						}
+						position: relative;
+						overflow: hidden;
+
+						border-radius: 12px;
+						&::after {
+							content: url("../assets/onda-hero-ht.svg");
+							position: absolute;
+							bottom: -10px;
+							right: 0px;
+						}
+					}
+					.number {
+						@include general-title;
+						font-size: 57px;
+						line-height: 63px;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.valores {
+	background-color: #eef8ff;
+	padding: 120px 0 160px;
+
+	&_container {
+		@include container;
+		.d-title {
+			padding-left: 66px;
+			position: relative;
+			&::before {
+				content: url("../assets/line-title.svg");
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+	&_content {
+		display: flex;
+		gap: 16px;
+		margin-top: 80px;
+		flex-wrap: wrap;
+	}
+	&_card {
+		padding: 20px 20px 24px;
+		background: url("../assets/bg-card-vl-azul.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		max-width: 402px;
+		width: 100%;
+		border-radius: 0px 40px 0px 40px;
+		display: flex;
+		align-items: start;
+		color: #fff;
+
+		&--title {
+			@include general-title;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 12px;
+			padding-top: 12px;
+		}
+		&--text {
+			@include text;
+			font-size: 14px;
+			line-height: 16px;
+		}
+		&:nth-child(2) {
+			background: url("../assets/bg-card-vl-lr.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 12px 24px 12px 24px;
+			color: #674506;
+		}
+		&:nth-child(3) {
+			background: url("../assets/bg-card-vl-azul-c.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 12px 40px 12px 12px;
+			color: #064264;
+		}
+		&:nth-child(4) {
+			background: url("../assets/bg-card-vl-amarelo.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 12px 24px 12px 40px;
+			color: #025b00;
+		}
+		&:nth-child(5) {
+			background: url("../assets/bg-card-vl-verde.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 24px 12px 12px 12px;
+			color: #135330;
+		}
+		&:nth-child(6) {
+			background: url("../assets/bg-card-vl-azul-e.svg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 0px 40px 0px 40px;
+			color: #fff;
+		}
+	}
+}
+
+.location {
+	background-color: #eef8ff;
+	padding-bottom: 290px;
+	&_container {
+		@include container;
+		.d-title {
+			padding-left: 66px;
+			position: relative;
+			margin-bottom: 32px;
+			&::before {
+				content: url("../assets/location.svg");
+				position: absolute;
+				left: 0;
+			}
+		}
+		.d-text {
+			@include text;
+			color: #1659a3;
+		}
+	}
+	&_content {
+		margin-top: 32px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		row-gap: 72px;
+	}
+	&_card {
+		display: flex;
+		gap: 32px;
+		align-items: center;
+		min-width: 535px;
+		.d-text {
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
+}
+.d-title {
+	@include general-title;
+	font-size: 48px;
+	color: #1659a2;
+	line-height: 52px;
+}
