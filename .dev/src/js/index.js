@@ -7,3 +7,9 @@ $(".mundo_container").slick({
 	nextArrow: $(".next"),
 	dots: true,
 })
+
+$(".slider-home").slick({
+	infinite: false,
+	autoplay: true,
+	autoplaySpeed: 2500,
+})

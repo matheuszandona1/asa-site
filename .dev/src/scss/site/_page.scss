@@ -1,5 +1,4 @@
 .hero {
-	background: url("../assets/capao.png?as=webp");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -7,6 +6,36 @@
 	padding-top: 250px;
 	position: relative;
 	z-index: 3;
+	&.slider-home {
+		height: 100%;
+		padding-top: 0;
+		.slick-arrow {
+			display: none;
+		}
+		.slick-slide {
+			.hero_title {
+				margin: 0;
+				img {
+					width: 100%;
+				}
+				.desktop-only {
+					@include media(s) {
+						display: none;
+					}
+				}
+			}
+			background-size: 103% 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			padding-top: 359px;
+			height: 80vh;
+			@include media(s) {
+				background-size: cover;
+				height: 60vh;
+				padding-top: 149px;
+			}
+		}
+	}
 	@include media(s) {
 		padding-top: 200px;
 		height: 650px;
@@ -49,6 +78,18 @@
 	}
 }
 
+.borda-hero {
+	margin-top: -121px;
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	@media (max-width: 1513px) {
+		margin-top: -100px;
+	}
+	@include media(s) {
+		margin-top: -45px !important;
+	}
+}
 .tag {
 	background: linear-gradient(white, white) padding-box,
 		linear-gradient(to right, #85bb40, #fbde00, #dad422, #c0d03e, #77c58c, #1eb8eb, #1e93cc, #1e458d) border-box;
@@ -77,15 +118,17 @@
 .product {
 	margin-top: -100px;
 	padding: 54px 0 84px;
+	z-index: 11;
 	background: url("../assets/fundo-azul.png?as=webp");
 	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: bottom;
-	padding-top: 200px;
+	background-repeat: repeat;
+	background-position: top center;
+	padding-top: 0px;
 	position: relative;
 	@include media(s) {
 		overflow: hidden;
 		background-repeat: repeat;
+		margin-top: -40px;
 	}
 
 	&::before {
@@ -93,6 +136,7 @@
 		position: absolute;
 		left: 0;
 		top: -50px;
+		display: none;
 		@include media(s) {
 			transform: scale(0.7);
 			left: -30%;
@@ -103,7 +147,9 @@
 		content: url("../assets/enfeiteh-r.png?as=webp");
 		position: absolute;
 		right: 0;
-		top: -50px;
+		top: -70px;
+		z-index: 11;
+		display: none;
 		@include media(s) {
 			transform: scale(0.5);
 			right: -30%;
@@ -474,6 +520,8 @@
 	&.roxo {
 		margin-top: 0;
 		padding-top: 150px;
+		background-position: top center;
+		background-repeat: repeat;
 
 		padding-bottom: 250px;
 		@include media(s) {
