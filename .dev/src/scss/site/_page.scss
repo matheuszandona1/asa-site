@@ -619,10 +619,10 @@
 	&_card {
 		background: url("../assets/mundo-imh.png?as=webp");
 		mask-image: url("../assets/curva.svg");
-		height: 696px;
+		height: 600px;
 		background-repeat: no-repeat;
 		background-size: cover;
-		padding-top: 160px;
+		padding-top: 120px;
 		@include media(s) {
 			height: 100%;
 			padding-top: 60px;
