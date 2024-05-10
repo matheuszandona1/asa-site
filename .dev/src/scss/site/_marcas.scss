@@ -132,9 +132,9 @@
 				content: url("../assets/detalhes-marcas-af-hg.png");
 				bottom: -13px;
 				@include media(s) {
-					bottom: -130px !important;
-					right: -163px;
+					right: -289px;
 					transform: scale(0.7);
+					bottom: -89px !important;
 				}
 			}
 			.right-column {
@@ -194,6 +194,7 @@
 				margin: 82px auto 260px;
 				@include media(s) {
 					justify-content: space-between;
+					margin-bottom: 60px;
 				}
 			}
 
@@ -392,6 +393,7 @@
 	}
 	@include media(s) {
 		margin-top: 0 !important;
+		padding-bottom: 120px;
 	}
 	.bd-cima {
 		overflow: hidden;
@@ -414,6 +416,10 @@
 		}
 		@include media(s) {
 			margin-top: 0 !important;
+			max-width: 180%;
+			right: 0px;
+			bottom: 0;
+			position: absolute;
 		}
 	}
 	&_container {
@@ -432,10 +438,14 @@
 		.left-column {
 			margin-top: -60px;
 			padding-bottom: 60px;
+			@include media(s) {
+				margin-top: 0;
+			}
 			.d-title {
 				color: #f9a51a;
 				font-weight: 600;
 				margin: 32px 0;
+				font-size: 40px;
 				@include media(s) {
 					margin-top: 16px;
 				}
@@ -472,6 +482,9 @@
 			width: 100%;
 			flex-shrink: 0;
 			position: relative;
+			@include media(s) {
+				margin-bottom: 40px;
+			}
 			&::before {
 				content: url("../assets/curva-vd.png");
 				position: absolute;
@@ -500,8 +513,11 @@
 
 .marcas {
 	background-color: #fffbf3;
-	padding: 120px 0 150px;
+	padding: 80px 0 150px;
 	overflow: hidden;
+	@include media(s) {
+		padding-top: 40px;
+	}
 	.d-title {
 		text-align: center;
 		font-size: 40px;
@@ -516,10 +532,15 @@
 			line-height: 21px;
 		}
 		&::after {
-			content: url("../assets/asset-title-marcas.svg");
+			background-image: url("../assets/asset-title-marcas.svg");
+			content: "";
+			background-repeat: no-repeat;
+			background-size: 300px;
+			width: 300px;
+			height: 20px;
+			right: 75px;
+			bottom: 0px;
 			position: absolute;
-			right: 50px;
-			bottom: -15px;
 			@include media(s) {
 				right: 0;
 				background-image: url("../assets/asset-title-marcas.svg");
@@ -547,6 +568,10 @@
 			left: -50px;
 
 			top: -60px;
+			@include media(s) {
+				transform: scale(0.6);
+				top: -80px;
+			}
 		}
 		&::after {
 			content: url("../assets/folha.png");
@@ -555,6 +580,10 @@
 			right: -50px;
 			top: -60px;
 			transform: scaleX(-1);
+			@include media(s) {
+				transform: scaleX(-1) scale(0.6);
+				top: -80px;
+			}
 		}
 	}
 	&_content {
@@ -567,6 +596,7 @@
 		background-color: #fffbf3;
 		@include media(s) {
 			overflow: auto;
+			margin-bottom: 60px;
 		}
 
 		gap: 32px;
@@ -587,6 +617,7 @@
 			max-width: 100px;
 			width: 100%;
 			flex-shrink: 0;
+			height: 80px;
 			img {
 				max-width: 100%;
 				height: auto;
@@ -614,6 +645,9 @@
 
 		&.right {
 			justify-content: end;
+			@include media(s) {
+				flex-direction: column;
+			}
 			.wall {
 				border-radius: 232px 0px 0px 232px;
 				img {
@@ -721,6 +755,9 @@
 					right: 0;
 					left: 0;
 					margin: 0 auto;
+					@include media(s) {
+						max-width: 55%;
+					}
 				}
 				@include media(s) {
 					max-width: 80%;

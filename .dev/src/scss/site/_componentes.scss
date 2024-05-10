@@ -50,6 +50,7 @@
 		.dropdown-menu {
 			border-radius: 0px 16px 36px 16px;
 			padding: 20px;
+			top: 210%;
 			@include media(s) {
 				margin-top: 20px;
 			}
@@ -149,6 +150,7 @@
 		padding-top: 20px;
 		.mobile-only {
 			width: 100%;
+			margin-bottom: -5px;
 		}
 	}
 	background-size: cover;
@@ -183,7 +185,6 @@
 		@include container;
 		@include media(s) {
 			padding-top: 120px;
-			margin-top: -34px;
 			padding-bottom: 80px;
 			background-image: url("../assets/fundo-footer-mb.png");
 			background-size: cover;

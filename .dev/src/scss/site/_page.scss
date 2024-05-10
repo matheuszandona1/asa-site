@@ -78,11 +78,14 @@
 	margin-top: -100px;
 	padding: 54px 0 84px;
 	background: url("../assets/fundo-azul.png?as=webp");
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
 	padding-top: 200px;
 	position: relative;
 	@include media(s) {
 		overflow: hidden;
+		background-repeat: repeat;
 	}
 
 	&::before {
@@ -298,9 +301,13 @@
 		justify-content: center;
 		gap: 20px;
 		align-items: center;
+		max-width: 800px;
+		margin: 0 auto;
+
 		@include media(s) {
 			overflow: auto;
 			justify-content: start;
+			margin-top: -40px;
 			img {
 				max-width: 100px;
 				object-fit: cover;
@@ -308,7 +315,7 @@
 		}
 		img {
 			display: block;
-			max-width: 100%;
+			max-width: 150px;
 			height: auto;
 			max-height: 120px;
 		}
@@ -338,6 +345,11 @@
 			justify-content: space-between;
 			align-items: center;
 			transition: all 0.3s ease;
+			@include media(s) {
+				width: 100%;
+				gap: 12px;
+				padding: 6px 12px;
+			}
 		}
 		&:hover {
 			background-color: #1e67a9;
@@ -357,8 +369,9 @@
 			}
 		}
 		@include media(s) {
-			max-width: 300px;
+			max-width: 100%;
 			margin: 40px auto 0;
+			width: 100%;
 			a {
 				width: 100%;
 			}
@@ -369,7 +382,7 @@
 		margin-top: 0;
 		background: url("../assets/fundo-amarelo.svg");
 		@include media(s) {
-			padding-top: 60px;
+			padding-top: 0px;
 		}
 		.product_card-img {
 			.position-absolute {
@@ -387,6 +400,9 @@
 		.sep {
 			top: 60px;
 			position: absolute;
+			@include media(s) {
+				top: 0;
+			}
 			img {
 				max-width: 100%;
 				height: auto;
@@ -409,6 +425,12 @@
 			gap: 48px;
 			padding: 20px 60px;
 			margin: 0;
+			@include media(s) {
+				margin-top: -40px;
+			}
+			img {
+				max-width: 100px;
+			}
 		}
 		.product_btn {
 			display: inline-block;
@@ -456,6 +478,7 @@
 		padding-bottom: 250px;
 		@include media(s) {
 			padding-top: 60px;
+			padding-bottom: 80px;
 		}
 		.product_card-img {
 			.position-absolute {
@@ -473,6 +496,9 @@
 		.sep {
 			top: 60px;
 			position: absolute;
+			@include media(s) {
+				top: 0;
+			}
 			img {
 				max-width: 100%;
 				height: auto;
@@ -486,6 +512,9 @@
 		}
 		.product_title {
 			color: #8f4bc0;
+			@include media(s) {
+				margin-top: 0;
+			}
 		}
 		.product_desc {
 			color: #8f4bc0;
@@ -513,6 +542,9 @@
 					}
 				}
 			}
+			@include media(s) {
+				margin-top: 0;
+			}
 		}
 		.product_card--text {
 			background-color: #7e39b0;
@@ -537,7 +569,7 @@
 	overflow: hidden;
 	margin-top: -100px;
 	@include media(s) {
-		margin-top: -130px;
+		margin-top: -131px;
 	}
 	.mobile-only {
 		width: 100%;
@@ -736,6 +768,9 @@
 		padding: 12px;
 		border-radius: 50%;
 		cursor: pointer;
+		width: 50px;
+		height: 50px;
+		text-align: center;
 		img {
 			max-width: 20px;
 		}
