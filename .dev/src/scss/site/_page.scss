@@ -32,16 +32,16 @@
 			@media (min-width: 1800px) {
 				padding-top: 350px;
 			}
-			@media (max-width: 1440px) {
+			@media (min-width: 1440px) and (max-width: 1513px) {
 				padding-top: 310px;
 			}
-			@media (max-width: 1366px) {
+			@media (min-width: 1280px) and (max-width: 1366px) {
 				padding-top: 300px;
 			}
 			@include media(s) {
 				background-size: cover;
 				height: 60vh;
-				padding-top: 149px;
+				padding-top: 213px;
 			}
 		}
 	}
