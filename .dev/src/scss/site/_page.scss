@@ -27,8 +27,17 @@
 			background-size: 103% 100%;
 			background-repeat: no-repeat;
 			background-position: center;
-			padding-top: 359px;
+			padding-top: 315px;
 			height: 80vh;
+			@media (min-width: 1800px) {
+				padding-top: 350px;
+			}
+			@media (max-width: 1440px) {
+				padding-top: 310px;
+			}
+			@media (max-width: 1366px) {
+				padding-top: 300px;
+			}
 			@include media(s) {
 				background-size: cover;
 				height: 60vh;

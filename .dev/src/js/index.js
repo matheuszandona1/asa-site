@@ -10,6 +10,6 @@ $(".mundo_container").slick({
 
 $(".slider-home").slick({
 	infinite: false,
-	autoplay: true,
+	// autoplay: true,
 	autoplaySpeed: 2500,
 })
