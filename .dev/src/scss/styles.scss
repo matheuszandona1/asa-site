@@ -15,3 +15,16 @@
 html {
 	font-family: "Poppins", sans-serif;
 }
+
+.mobile-only {
+	display: none;
+	@include media(s) {
+		display: block;
+	}
+}
+.desktop-only {
+	display: block;
+	@media (max-width: 1000px) {
+		display: none;
+	}
+}

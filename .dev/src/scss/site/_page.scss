@@ -3,13 +3,43 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 80vh;
+	height: 85vh;
 	padding-top: 250px;
 	position: relative;
 	z-index: 3;
-
+	@include media(s) {
+		padding-top: 200px;
+		height: 650px;
+		background-size: cover;
+	}
 	&_container {
 		overflow: hidden;
+		@include media(s) {
+			.mobile-only {
+				display: flex;
+				flex-wrap: wrap;
+
+				img {
+					width: 100%;
+				}
+				span {
+					display: block;
+					width: 100%;
+					font-size: 40px;
+					line-height: 50px;
+					color: #fff;
+					font-weight: 900;
+					padding-left: 48px;
+				}
+				.text-right {
+					text-align: right;
+					padding-right: 48px;
+					margin-top: -100px;
+					position: relative;
+					z-index: 2;
+				}
+			}
+		}
 	}
 	&_title {
 		img {
@@ -28,14 +58,21 @@
 	font-weight: 400;
 	font-family: "Poppins", sans-serif;
 
-	font-size: 22px;
+	font-size: 18px;
 	line-height: 26px;
 	padding: 6px 20px;
 	color: #1e67a9;
 	font-style: italic;
+	@include media(s) {
+		font-size: 12px;
+		line-height: 14px;
+	}
 }
 .bg-product {
 	background: url("../assets/bg-products.png?as=webp");
+	@include media(s) {
+		background-size: 1400px;
+	}
 }
 .product {
 	margin-top: -100px;
@@ -44,17 +81,31 @@
 	background-size: cover;
 	padding-top: 200px;
 	position: relative;
+	@include media(s) {
+		overflow: hidden;
+	}
+
 	&::before {
 		content: url("../assets/enfeiteh-l.png?as=webp");
 		position: absolute;
 		left: 0;
 		top: -50px;
+		@include media(s) {
+			transform: scale(0.7);
+			left: -30%;
+			top: -100px;
+		}
 	}
 	&::after {
 		content: url("../assets/enfeiteh-r.png?as=webp");
 		position: absolute;
 		right: 0;
 		top: -50px;
+		@include media(s) {
+			transform: scale(0.5);
+			right: -30%;
+			top: -100px;
+		}
 	}
 	&_container {
 		max-width: 1084px;
@@ -63,6 +114,10 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		@include media(s) {
+			padding: 0 24px;
+			overflow: hidden;
+		}
 	}
 	&_title {
 		color: #1e67a9;
@@ -72,6 +127,14 @@
 		font-size: 42px;
 		line-height: 51px;
 		margin-top: 48px;
+		@include media(s) {
+			font-size: 20px;
+			line-height: 17px;
+			padding: 0 32px;
+
+			text-align: center;
+			margin-bottom: 24px;
+		}
 		&::after {
 			position: absolute;
 		}
@@ -86,6 +149,10 @@
 		margin: 0px auto 68px;
 		color: #1e67a9;
 		text-align: center;
+		@include media(s) {
+			font-size: 12px;
+			line-height: 14px;
+		}
 	}
 	&_card {
 		display: flex;
@@ -95,17 +162,39 @@
 		transition: all 0.3s ease-in;
 		justify-content: center;
 		margin-bottom: 104px;
+		@include media(s) {
+			flex-direction: column;
+		}
 		&-img {
 			position: relative;
 			height: 100%;
 			transition: all 0.3s ease-in;
+			text-align: center;
+			@include media(s) {
+				text-align: center;
+			}
 			img {
 				max-width: 75%;
 			}
 			.position-absolute {
-				left: -40px;
+				left: 0px;
 				max-width: 75%;
 				bottom: -40px;
+				&.bemte {
+					bottom: -100px;
+					left: 0px;
+					@include media(s) {
+						left: 0;
+						right: 0;
+						margin: 0 auto;
+						bottom: -50px;
+						max-width: 60%;
+					}
+				}
+				@include media(s) {
+					left: 0;
+					bottom: -20px;
+				}
 			}
 		}
 
@@ -126,6 +215,7 @@
 			left: 270px;
 			color: #fff;
 			transition: all 0.3s ease-in;
+
 			h4 {
 				font-weight: 600;
 				font-family: "Poppins", sans-serif;
@@ -135,6 +225,7 @@
 				margin-bottom: 16px;
 			}
 			p {
+				margin-bottom: 40px;
 			}
 
 			.button {
@@ -177,12 +268,21 @@
 		&:hover {
 			.product_card-img {
 				margin-right: 300px;
+				@include media(s) {
+					margin: 0;
+				}
 			}
 			.product_card--text {
 				width: 100%;
 				display: block;
 				opacity: 1;
-				left: 354px;
+				left: 440px;
+				@include media(s) {
+					left: 0;
+					margin-top: 40px;
+					position: relative;
+					padding: 24px;
+				}
 			}
 		}
 	}
@@ -198,6 +298,14 @@
 		justify-content: center;
 		gap: 20px;
 		align-items: center;
+		@include media(s) {
+			overflow: auto;
+			justify-content: start;
+			img {
+				max-width: 100px;
+				object-fit: cover;
+			}
+		}
 		img {
 			display: block;
 			max-width: 100%;
@@ -248,19 +356,32 @@
 				}
 			}
 		}
+		@include media(s) {
+			max-width: 300px;
+			margin: 40px auto 0;
+			a {
+				width: 100%;
+			}
+		}
 	}
 	&.yellow {
 		padding-top: 154px;
 		margin-top: 0;
 		background: url("../assets/fundo-amarelo.svg");
-
+		@include media(s) {
+			padding-top: 60px;
+		}
 		.product_card-img {
 			.position-absolute {
-				right: 200px;
+				right: 50px;
 				left: 0;
 				margin: 0 auto;
 				max-width: 75%;
 				bottom: 45px;
+				@include media(s) {
+					left: 0;
+					right: 0;
+				}
 			}
 		}
 		.sep {
@@ -333,13 +454,20 @@
 		padding-top: 150px;
 
 		padding-bottom: 250px;
+		@include media(s) {
+			padding-top: 60px;
+		}
 		.product_card-img {
 			.position-absolute {
-				right: 130px;
+				right: 50px;
 				left: 0;
 				margin: 0 auto;
 				max-width: 65%;
 				bottom: 60px;
+				@include media(s) {
+					left: 0;
+					right: 0;
+				}
 			}
 		}
 		.sep {
@@ -408,9 +536,21 @@
 	padding-top: 80px;
 	overflow: hidden;
 	margin-top: -100px;
+	@include media(s) {
+		margin-top: -130px;
+	}
+	.mobile-only {
+		width: 100%;
+		margin-bottom: -35px;
+		position: relative;
+		z-index: 3;
+	}
 	.bdb {
 		position: absolute;
 		bottom: 13px;
+		@include media(s) {
+			display: none;
+		}
 	}
 	.bdc {
 		position: absolute;
@@ -448,6 +588,11 @@
 			justify-content: start;
 			bottom: 40%;
 			gap: 10px;
+			@include media(s) {
+				bottom: unset;
+				top: 120px;
+				justify-content: center;
+			}
 			li {
 				margin: 0;
 			}
@@ -478,6 +623,12 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding-top: 160px;
+		@include media(s) {
+			height: 100%;
+			padding-top: 60px;
+			padding-bottom: 200px;
+			mask-image: unset;
+		}
 	}
 	&_holder {
 		max-width: 1200px;
@@ -485,11 +636,18 @@
 		display: flex;
 		justify-content: space-between;
 		color: #fff;
+		@include media(s) {
+			flex-direction: column;
+			padding: 0 24px;
+		}
 		.tag {
 			border-color: rgba(133, 187, 64, 1);
 			background: transparent;
 			color: #fff;
 			margin-bottom: 40px;
+			@include media(s) {
+				margin-bottom: 80px;
+			}
 		}
 		.left-column {
 			.mundo_card--title {
@@ -497,12 +655,30 @@
 				font-weight: 600;
 				font-size: 55px;
 				line-height: 50px;
+				@include media(s) {
+					font-size: 24px;
+					line-height: 22px;
+					margin-bottom: 40px;
+				}
 				span {
 					font-family: "Poppins", sans-serif;
 
 					font-size: 96px;
 					line-height: 88px;
+					@include media(s) {
+						font-size: 47px;
+						line-height: 44px;
+						display: block;
+						width: 100%;
+					}
 				}
+			}
+			@include media(s) {
+				display: flex;
+				flex-direction: column;
+
+				align-items: center;
+				justify-content: center;
 			}
 		}
 		.right-column {
@@ -544,6 +720,13 @@
 		@media (min-width: 1600px) {
 			max-width: 75%;
 		}
+		@include media(s) {
+			max-width: 30%;
+			top: unset;
+			bottom: 100px;
+			right: 20px;
+			left: unset;
+		}
 	}
 	.prev,
 	.next {
@@ -553,6 +736,9 @@
 		padding: 12px;
 		border-radius: 50%;
 		cursor: pointer;
+		img {
+			max-width: 20px;
+		}
 	}
 	.next {
 		right: 0;
@@ -561,6 +747,7 @@
 
 .blog-card {
 	padding: 80px 0px;
+	display: none;
 	&_container {
 		.tag {
 			display: inline-block;
@@ -590,6 +777,10 @@
 		margin: 64px 0;
 		display: flex;
 		gap: 56px;
+		@include media(s) {
+			overflow: auto;
+			justify-content: start;
+		}
 	}
 	.button--container {
 		a {
@@ -689,6 +880,7 @@
 	background: url("../assets/fundo-news.png?as=webp");
 	position: relative;
 	z-index: 3;
+	display: none;
 	&__container {
 		display: flex;
 		max-width: 1240px;

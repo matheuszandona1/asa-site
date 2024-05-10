@@ -3,35 +3,111 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 0 44px;
-	padding-top: 12px;
+	padding-top: 8px;
+
 	@media (min-width: 1600px) {
 		height: 135px;
+	}
+	@include media(s) {
+		background: url("../assets/header-mb.png");
+		background-size: 100%;
+		padding: 0;
+		height: 76px;
 	}
 	height: 107px;
 	width: 100%;
 	top: 0;
 	z-index: 999;
-	position: absolute;
+	position: fixed;
+	.container-fluid {
+		padding-top: 0;
+		@include media(s) {
+			padding: 10px 0;
+		}
+	}
 	.navbar {
 		padding: 0;
 		&-nav {
 			width: 100%;
 			justify-content: center;
 			gap: 56px;
+			@include media(s) {
+				padding: 120px 40px 40px;
+				gap: 40px;
+			}
 		}
 		&-brand {
 			img {
 				max-width: 84px;
 			}
+			@include media(s) {
+				padding-left: 40px;
+				position: relative;
+				z-index: 2;
+			}
 		}
 
+		.dropdown-menu {
+			border-radius: 0px 16px 36px 16px;
+			padding: 20px;
+			@include media(s) {
+				margin-top: 20px;
+			}
+			.dropdown-item {
+				color: #1e67a9;
+				@include text;
+				font-weight: 500;
+			}
+		}
+		.dropdown-toggle {
+			&::after {
+				color: #ffc60b;
+				transition: all 0.2s ease-in-out;
+				@include media(s) {
+					right: 0;
+					position: absolute;
+					top: 20px;
+				}
+			}
+			&.show {
+				&::after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		&-toggler {
+			&:focus {
+				border: none;
+				outline: none;
+				box-shadow: none;
+			}
+			@include media(s) {
+				padding-right: 40px;
+				position: relative;
+				z-index: 2;
+			}
+		}
 		.nav {
+			@include media(s) {
+				&-item {
+					@include media(s) {
+						border-bottom: 1px solid #fff;
+						padding-bottom: 20px;
+						&:last-child {
+							border: none;
+						}
+					}
+				}
+			}
 			&-link {
 				font-weight: 400;
 				font-size: 16px;
 				line-height: 19px;
 				color: #fff;
 				font-family: "Poppins", sans-serif;
+				@include media(s) {
+					padding-bottom: 0;
+				}
 			}
 		}
 		form {
@@ -48,6 +124,16 @@
 				align-items: center;
 			}
 		}
+		&-collapse {
+			@include media(s) {
+				background: url("../assets/menu-list.png");
+				background-size: 100%;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				height: 580px;
+			}
+		}
 	}
 }
 
@@ -57,10 +143,18 @@
 
 .footer {
 	background: url("../assets/footer.png?as=webp") no-repeat;
+
+	@include media(s) {
+		background-image: unset;
+		padding-top: 20px;
+		.mobile-only {
+			width: 100%;
+		}
+	}
 	background-size: cover;
 	padding: 80px 0px;
 	padding-top: 160px;
-	margin-top: -80px;
+	margin-top: -100px;
 	position: relative;
 	overflow: hidden;
 	&::before {
@@ -69,6 +163,9 @@
 		right: 0;
 		bottom: -200px;
 		transform: rotate(180deg);
+		@include media(s) {
+			display: none;
+		}
 	}
 	&::after {
 		content: url("../assets/enfeiteh-r.png?as=webp");
@@ -76,17 +173,35 @@
 		left: 0;
 		bottom: -200px;
 		transform: rotate(180deg);
+		@include media(s) {
+			display: none;
+		}
 	}
 	&__container {
 		display: flex;
 		gap: 80px;
 		@include container;
+		@include media(s) {
+			padding-top: 120px;
+			margin-top: -34px;
+			padding-bottom: 80px;
+			background-image: url("../assets/fundo-footer-mb.png");
+			background-size: cover;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 40px;
+			background-position: center;
+		}
 	}
 	&_title {
 		margin-bottom: 32px;
 		font-size: 16px;
 		line-height: 20px;
 		font-weight: 800;
+		@include media(s) {
+			text-align: center;
+		}
 	}
 	&_column {
 		color: #fff;
@@ -99,8 +214,17 @@
 				justify-content: space-between;
 				margin: 0;
 				position: relative;
+				@include media(s) {
+					flex-direction: column;
+
+					justify-content: center;
+					align-items: center;
+				}
 				li {
 					width: 115px;
+					@include media(s) {
+						text-align: center;
+					}
 				}
 				&:after {
 					position: absolute;
@@ -111,6 +235,9 @@
 					left: 0;
 					right: 0px;
 					margin: 0 auto;
+					@include media(s) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -123,7 +250,7 @@
 		a {
 			color: #fff;
 			text-decoration: none;
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 16px;
 			line-height: 19px;
 		}
@@ -140,16 +267,33 @@
 	}
 	&_menu {
 		gap: 20px 56px;
+		@include media(s) {
+			gap: 24px;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			li {
+				text-align: center;
+			}
+		}
 	}
 	&_contact {
 		p {
 			margin-bottom: 0;
 			font-weight: 600;
 			font-family: "Poppins", sans-serif;
+			@include media(s) {
+				text-align: center;
+			}
 		}
 		a {
 			font-weight: 500;
 			font-family: "Poppins", sans-serif;
+			@include media(s) {
+				text-align: center;
+				width: 100%;
+				display: block;
+			}
 		}
 		margin-bottom: 20px;
 	}

@@ -5,6 +5,9 @@
 		padding-top: 140px;
 		position: relative;
 		overflow: hidden;
+		@include media(s) {
+			height: 100vh;
+		}
 		&::before {
 			content: url("../assets/detalhes-marcas-bf.png");
 			position: absolute;
@@ -15,6 +18,11 @@
 			}
 			@media (min-width: 1800px) {
 				bottom: -10px;
+			}
+			@include media(s) {
+				content: url("../assets/alimentos-mobile-bf.png");
+				bottom: 40px !important;
+				z-index: 3;
 			}
 		}
 		&::after {
@@ -28,8 +36,16 @@
 			@media (min-width: 1800px) {
 				bottom: -10px;
 			}
+			@include media(s) {
+				content: url("../assets/alimentos-mobile.png");
+				bottom: -22px !important;
+				z-index: 5;
+			}
 		}
 		&_container {
+			@include media(s) {
+				overflow: hidden;
+			}
 			.tag {
 				margin: 0 auto;
 				text-align: center;
@@ -37,6 +53,11 @@
 				display: block;
 				background: transparent;
 				color: #fff;
+				@include media(s) {
+					font-style: normal;
+					font-size: 16px;
+					line-height: 19px;
+				}
 			}
 			@include container;
 		}
@@ -46,13 +67,28 @@
 			color: #fff;
 			font-weight: 600;
 			margin: 16px 0 32px;
+			@include media(s) {
+				font-size: 30px;
+				line-height: 36px;
+			}
 		}
 		&_content {
 			display: flex;
 			gap: 32px;
+			@include media(s) {
+				flex-direction: column;
+				height: 500px;
+				position: relative;
+			}
 			.left-column {
 				max-width: 55%;
 				margin-top: 40px;
+				@include media(s) {
+					max-width: 100%;
+					margin-top: 0;
+					position: relative;
+					z-index: 2;
+				}
 				img {
 					max-width: 100%;
 					height: auto;
@@ -65,6 +101,16 @@
 			.right-column {
 				max-width: 55%;
 				margin-top: 20px;
+				@include media(s) {
+					max-width: 80%;
+					left: 0;
+					right: -120px;
+					margin: 0 auto;
+					position: absolute;
+					top: 100px;
+
+					z-index: 4;
+				}
 				img {
 					max-width: 100%;
 					height: auto;
@@ -77,9 +123,26 @@
 			background: url("../assets/fundo-marcas-hg.png");
 			&::before {
 				content: url("../assets/detalhes-marcas-bf-hg.png");
+				bottom: 0;
+				@include media(s) {
+					bottom: 60px !important;
+				}
 			}
 			&::after {
 				content: url("../assets/detalhes-marcas-af-hg.png");
+				bottom: -13px;
+				@include media(s) {
+					bottom: -130px !important;
+					right: -163px;
+					transform: scale(0.7);
+				}
+			}
+			.right-column {
+				height: 100%;
+				margin-top: 120px;
+				@include media(s) {
+					top: 125px;
+				}
 			}
 		}
 		.video {
@@ -98,10 +161,23 @@
 				&::before {
 					content: url("../assets/curva-vd-hg.svg");
 				}
+				&::after {
+					content: url("../assets/flor.png");
+				}
 			}
 		}
 		.marcas {
 			background-color: #fbf3ff;
+
+			&_card {
+				@include media(s) {
+					max-width: 120px;
+					background-color: transparent;
+					img {
+						max-width: 100px;
+					}
+				}
+			}
 			.d-title {
 				color: #772cae;
 			}
@@ -116,6 +192,9 @@
 				border: 1px solid #bd87e3;
 				max-width: 500px;
 				margin: 82px auto 260px;
+				@include media(s) {
+					justify-content: space-between;
+				}
 			}
 
 			&_holder {
@@ -156,6 +235,11 @@
 			}
 			&::after {
 				content: url("../assets/detalhes-marcas-af-lp.png");
+				@include media(s) {
+					transform: scale(0.7);
+					right: -200px;
+					bottom: -80px !important;
+				}
 			}
 			&_content {
 				.left-column {
@@ -209,6 +293,9 @@
 				border: 1px solid #1eade2;
 				max-width: 1000px;
 				margin: 82px auto 260px;
+				@include media(s) {
+					margin-bottom: 80px;
+				}
 			}
 			&_card {
 				padding: 10px 20px;
@@ -223,6 +310,14 @@
 			}
 
 			&_holder {
+				&.flamengo {
+					@include media(s) {
+						padding-left: 24px;
+						.info {
+							padding-left: 0;
+						}
+					}
+				}
 				.d-text {
 					color: #1e67a9;
 				}
@@ -242,6 +337,9 @@
 						&-obj {
 							left: -50px;
 							top: -60px !important;
+							@include media(s) {
+								top: -20px !important;
+							}
 						}
 					}
 				}
@@ -262,6 +360,23 @@
 					left: -150px;
 					right: 0;
 					margin: 0 auto;
+					&.bemte {
+						@include media(s) {
+							max-width: 170px !important;
+							left: 0px;
+						}
+					}
+					&.aliado {
+						@include media(s) {
+							top: -20px !important;
+							left: 0;
+						}
+					}
+					@include media(s) {
+						max-width: 250px;
+						left: -100px;
+						top: 0;
+					}
 				}
 			}
 		}
@@ -275,11 +390,15 @@
 	@media (max-width: 1366px) {
 		margin-top: -37px;
 	}
+	@include media(s) {
+		margin-top: 0 !important;
+	}
 	.bd-cima {
 		overflow: hidden;
 		max-width: 100%;
 		height: auto;
-		@media (min-width: 1800px) {
+		@include media(s) {
+			margin-top: -39px;
 		}
 	}
 	.bd-baixo {
@@ -293,6 +412,9 @@
 		@media (min-width: 1800px) {
 			margin-top: -320px;
 		}
+		@include media(s) {
+			margin-top: 0 !important;
+		}
 	}
 	&_container {
 		@include container;
@@ -300,6 +422,11 @@
 		gap: 100px;
 		position: relative;
 		z-index: 3;
+		@include media(s) {
+			flex-direction: column;
+			padding: 0 32px;
+			padding-top: 40px;
+		}
 
 		padding-top: 120px;
 		.left-column {
@@ -307,6 +434,9 @@
 				color: #f9a51a;
 				font-weight: 600;
 				margin: 32px 0;
+				@include media(s) {
+					margin-top: 16px;
+				}
 			}
 
 			.d-text {
@@ -346,6 +476,10 @@
 				left: -35px;
 				bottom: 50px;
 				transform: scale(0.6);
+				@include media(s) {
+					bottom: -35px;
+					left: -30px;
+				}
 			}
 			&::after {
 				content: url("../assets/quase-milho.png");
@@ -375,17 +509,35 @@
 		font-weight: 600;
 		color: #3fa145;
 		position: relative;
+		@include media(s) {
+			font-size: 24px;
+			line-height: 21px;
+		}
 		&::after {
 			content: url("../assets/asset-title-marcas.svg");
 			position: absolute;
 			right: -5px;
 			bottom: -15px;
+			@include media(s) {
+				right: 0;
+				background-image: url("../assets/asset-title-marcas.svg");
+				content: "";
+				background-repeat: no-repeat;
+				background-size: contain;
+				width: 200px;
+				height: 20px;
+				right: 34px;
+				bottom: -18px;
+			}
 		}
 	}
 	&_container {
 		position: relative;
 
 		@include container;
+		@include media(s) {
+			padding: 0 24px;
+		}
 		&::before {
 			content: url("../assets/folha.png");
 			position: absolute;
@@ -411,6 +563,9 @@
 		margin-top: 82px;
 		align-items: center;
 		background-color: #fffbf3;
+		@include media(s) {
+			overflow: auto;
+		}
 
 		gap: 32px;
 		position: relative;
@@ -425,6 +580,16 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 4px 12px 12px 12px;
+		@include media(s) {
+			background-color: #fffbf3;
+			max-width: 100px;
+			width: 100%;
+			flex-shrink: 0;
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
 	}
 	&_holder {
 		display: flex;
@@ -432,10 +597,19 @@
 		justify-content: start;
 		margin-bottom: 120px;
 		position: relative;
-		&.right {
-			.wall {
+		@include media(s) {
+			flex-direction: column-reverse;
+			padding-right: 24px;
+			gap: 40px;
+			margin-bottom: 60px;
+			&.right {
+				padding-right: 0;
+				.info {
+					padding: 0 24px;
+				}
 			}
 		}
+
 		&.right {
 			justify-content: end;
 			.wall {
@@ -448,7 +622,12 @@
 					left: 0;
 					right: -50px !important;
 					margin: 0 auto;
-					top: 30px !important;
+					top: 0px !important;
+
+					@include media(s) {
+						max-width: 60%;
+						top: -18px !important;
+					}
 				}
 				&_holder {
 					border: 1px solid #67b442;
@@ -456,6 +635,10 @@
 					border-radius: 232px 0px 0px 232px;
 					padding-right: 0;
 					padding-left: 20px;
+					@include media(s) {
+						padding-right: 0 !important;
+						padding-left: 24px !important;
+					}
 				}
 			}
 		}
@@ -467,6 +650,10 @@
 		.info {
 			max-width: 500px;
 			color: #3fa145;
+			@include media(s) {
+				padding: 0 24px;
+				padding-right: 0;
+			}
 			.d-title {
 				margin-bottom: 40px;
 			}
@@ -478,6 +665,9 @@
 			}
 			.button--container {
 				padding: 0 50px;
+				@include media(s) {
+					padding: 0 24px;
+				}
 				.tag {
 					padding: 8px 20px;
 					width: 100%;
@@ -495,6 +685,7 @@
 		}
 		.wall {
 			background-color: #67b442;
+
 			border-radius: 0px 232px 232px 0px;
 			max-width: 700px;
 			width: 100%;
@@ -504,19 +695,35 @@
 			overflow: hidden;
 			display: flex;
 			align-items: end;
+			@include media(s) {
+				height: 150px;
+			}
 			img {
 				margin-right: -5px;
-				max-width: 90%;
+				max-width: 100%;
 				height: auto;
-				margin-bottom: -50px;
+				margin-bottom: -10px;
 				display: block;
 				z-index: 3;
+				@include media(s) {
+					margin-bottom: -10px;
+				}
 			}
 			&-obj {
 				position: absolute;
 				z-index: 1;
 				top: -30px;
 				max-width: 650px;
+				&.bomilho {
+					max-width: 400px;
+					right: 0;
+					left: 0;
+					margin: 0 auto;
+				}
+				@include media(s) {
+					max-width: 80%;
+					top: 5px;
+				}
 			}
 			&_holder {
 				padding: 20px;
