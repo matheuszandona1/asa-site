@@ -10,7 +10,7 @@
 		height: 100%;
 		padding-top: 0;
 		.slick-arrow {
-			display: none;
+			display: none !important;
 		}
 		.slick-slide {
 			.hero_title {
@@ -236,8 +236,14 @@
 			}
 			.position-absolute {
 				left: 0px;
+
 				max-width: 75%;
 				bottom: -40px;
+				&.invc {
+					right: 0;
+					margin: 0 auto;
+					bottom: 0;
+				}
 				&.bemte {
 					bottom: -100px;
 					left: 0px;
@@ -657,7 +663,7 @@
 			top: 20px;
 		}
 		@media (min-width: 1800px) {
-			top: 3px;
+			top: 11px !important;
 		}
 	}
 	&_container {
@@ -714,10 +720,173 @@
 		background-size: cover;
 		padding-top: 120px;
 		@include media(s) {
-			height: 100%;
+			height: 1092px;
 			padding-top: 60px;
 			padding-bottom: 200px;
 			mask-image: unset;
+		}
+		&:first-child {
+			.mundo_holder {
+				align-items: start;
+			}
+		}
+		&:nth-child(2) {
+			.mundo_holder {
+				align-items: start;
+			}
+			.left-column {
+				padding-top: 30px;
+				.mundo_card--title {
+					span {
+						font-size: 66px;
+						line-height: 60px;
+					}
+					@include media(s) {
+						margin-bottom: 0px;
+						padding-top: 60px;
+						span {
+							font-size: 32px;
+							line-height: 32px;
+						}
+					}
+				}
+			}
+			.right-column {
+				backdrop-filter: none;
+				background-color: transparent;
+				box-shadow: none;
+				display: flex;
+				width: 100%;
+				max-width: 592px;
+				gap: 16px;
+				flex-wrap: wrap;
+				height: 364px;
+				position: relative;
+				padding: 0;
+				@include media(s) {
+					padding-top: 40px;
+					height: 100%;
+					padding-bottom: 40px;
+					justify-content: space-between;
+					overflow: auto;
+					flex: nowrap;
+				}
+
+				.hero_card {
+					max-width: 288px;
+					width: 100%;
+					padding: 20px;
+					border-radius: 0px 0px 0px 24px;
+					background: url("../assets/ca-hero-ht.svg");
+					background-repeat: no-repeat;
+					background-size: cover;
+					height: 174px;
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					justify-content: start;
+					color: #fff;
+					@include media(s) {
+						max-width: 100%;
+						height: 100%;
+					}
+					.text {
+						@include text;
+						font-size: 14px;
+						@include media(s) {
+							font-size: 14px;
+							line-height: 16px;
+						}
+					}
+					&:first-child {
+						position: relative;
+						.text {
+							font-style: italic;
+						}
+					}
+					&:nth-child(2) {
+						background: url("../assets/cl-hero-hist.svg");
+						position: relative;
+						background-repeat: no-repeat;
+						background-size: cover;
+						.text,
+						.number {
+							color: #604007;
+						}
+						.text {
+							font-style: italic;
+						}
+
+						border-radius: 12px 24px 12px 24px;
+					}
+					&:nth-child(3) {
+						background: url("../assets/cv-hero-ht.svg");
+						background-repeat: no-repeat;
+						background-size: cover;
+
+						border-radius: 24px 12px 12px 12px;
+						.text {
+							font-style: italic;
+						}
+					}
+					&:nth-child(4) {
+						background: url("../assets/cac-hero-ht.svg");
+						background-repeat: no-repeat;
+						background-size: cover;
+
+						.number {
+							position: relative;
+							z-index: 2;
+							color: #003240;
+						}
+						.text {
+							color: #003240;
+						}
+						position: relative;
+						overflow: hidden;
+
+						border-radius: 12px;
+					}
+					.number {
+						text-align: left;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		&:nth-child(3) {
+			.mundo_holder {
+				@include media(s) {
+					justify-content: start;
+					align-items: start;
+				}
+				.left-column {
+					margin-top: -60px;
+
+					@include media(s) {
+						margin-top: 0;
+						padding-top: 80px;
+						justify-content: start;
+						.mundo_card--title {
+							margin-bottom: 0;
+							text-align: left;
+							width: 100%;
+							display: block;
+							flex-shrink: 0;
+						}
+					}
+				}
+				.right-column {
+					@include media(s) {
+						flex-direction: column;
+						.hero_card {
+							width: 100%;
+							max-width: 100%;
+							height: 100%;
+						}
+					}
+				}
+			}
 		}
 	}
 	&_holder {
@@ -726,6 +895,7 @@
 		display: flex;
 		justify-content: space-between;
 		color: #fff;
+		align-items: center;
 		@include media(s) {
 			flex-direction: column;
 			padding: 0 24px;
@@ -781,6 +951,128 @@
 			border-radius: 8px;
 			padding: 40px;
 			color: #fff;
+			&.noronha {
+				display: flex;
+				backdrop-filter: none;
+				background-color: transparent;
+				box-shadow: none;
+				width: 100%;
+				max-width: 592px;
+				gap: 16px;
+				flex-wrap: wrap;
+				height: 364px;
+				position: relative;
+				padding: 0;
+				position: relative;
+				z-index: 2;
+				@include media(s) {
+					padding-top: 40px;
+					height: 100%;
+					padding-bottom: 40px;
+					justify-content: space-between;
+				}
+
+				.hero_card {
+					max-width: 288px;
+					width: 100%;
+					padding: 20px;
+					border-radius: 0px 0px 0px 24px;
+					background: url("../assets/dgd-home.svg");
+					background-repeat: no-repeat;
+					background-size: cover;
+
+					height: 174px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+					justify-content: center;
+					gap: 10px;
+					color: #fff;
+					@include media(s) {
+						max-width: 147px;
+						height: 110px;
+					}
+					.text {
+						@include text;
+						text-align: center;
+						font-size: 42px;
+						font-weight: bold;
+						@include media(s) {
+							font-size: 30px;
+							line-height: 30px;
+						}
+					}
+					&:first-child {
+						position: relative;
+						.number {
+							font-size: 54px;
+						}
+						.text {
+							font-size: 72px;
+							line-height: 42px;
+						}
+					}
+					&:nth-child(2) {
+						background: url("../assets/dgd-home-2.svg");
+						position: relative;
+						border-radius: 12px 24px 12px 24px;
+						background-repeat: no-repeat;
+						background-size: cover;
+
+						gap: 0;
+						.text {
+							font-size: 32px;
+							line-height: 32px;
+							margin: 0;
+						}
+					}
+					&:nth-child(3) {
+						background: url("../assets/dgd-home-3.svg");
+						background-repeat: no-repeat;
+						background-size: cover;
+						.text {
+							font-size: 24px;
+							@include media(s) {
+								font-size: 16px;
+							}
+						}
+						border-radius: 24px 12px 12px 12px;
+					}
+					&:nth-child(4) {
+						background: url("../assets/cac-hero-ht.svg");
+						background-repeat: no-repeat;
+						background-size: cover;
+						.number {
+							position: relative;
+							z-index: 2;
+						}
+						.text {
+							font-size: 20px;
+							position: relative;
+							z-index: 2;
+							@include media(s) {
+								font-size: 16px;
+								line-height: 18px;
+							}
+						}
+						position: relative;
+						overflow: hidden;
+
+						border-radius: 12px;
+					}
+					.number {
+						@include general-title;
+						font-size: 57px;
+						line-height: 63px;
+						text-align: center;
+						@include media(s) {
+							font-size: 40px;
+							line-height: 40px;
+						}
+					}
+				}
+			}
 			.mundo_card--sub-title {
 				font-weight: bold;
 				font-family: "Poppins", sans-serif;
