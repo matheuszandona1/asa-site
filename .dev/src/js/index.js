@@ -13,3 +13,5 @@ $(".slider-home").slick({
 	// autoplay: true,
 	autoplaySpeed: 2500,
 })
+
+$("#phone").mask("(00) 00000-0000")

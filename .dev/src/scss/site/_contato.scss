@@ -1,0 +1,148 @@
+.contato {
+	padding-top: 200px;
+	padding-bottom: 80px;
+	position: relative;
+	@include media(s) {
+		padding-top: 120px;
+	}
+	&::before {
+		content: url("../assets/ctt-aft.png");
+		position: absolute;
+		left: 0;
+		top: 100px;
+		@media (max-width: 1440px) {
+			top: 50px;
+		}
+		@media (max-width: 1280px) {
+			top: 30px;
+		}
+		@include media(s) {
+			display: none;
+		}
+	}
+	&_container {
+		@include container;
+		display: flex;
+		justify-content: space-between;
+		@include media(s) {
+			flex-direction: column;
+			padding: 0 32px;
+			gap: 48px;
+		}
+		.left-column {
+			max-width: 622px;
+			width: 100%;
+			flex-shrink: 0;
+			.d-title {
+				font-size: 70px;
+				line-height: 70px;
+				font-weight: bold;
+				margin-bottom: 32px;
+				@include media(s) {
+					font-size: 32px;
+					line-height: 32px;
+					margin-bottom: 16px;
+				}
+			}
+			.d-text {
+				@include text;
+				color: #1e67a9;
+				font-size: 15px;
+				margin-bottom: 48px;
+				@include media(s) {
+					margin-bottom: 24px;
+					font-size: 12px;
+					line-height: 14px;
+				}
+			}
+			form {
+				.form-group {
+					margin-bottom: 12px;
+					textarea {
+						all: unset;
+
+						width: 100%;
+						box-sizing: border-box;
+					}
+					input,
+					textarea {
+						border: 1px solid rgba(30, 103, 169, 0.1);
+						border-radius: 4px;
+						padding: 15px;
+						@include text;
+						color: #1e67a9;
+						&::placeholder {
+							@include text;
+							color: #1e67a9;
+						}
+					}
+				}
+				button {
+					all: unset;
+					color: #90600e;
+					@include text;
+					font-weight: 600;
+					background-color: #fbd900;
+					border-radius: 4px;
+					padding: 14px 32px;
+				}
+				.button--container {
+					text-align: right;
+				}
+			}
+		}
+		.right-column {
+			max-width: 420px;
+			position: relative;
+			.d-title {
+				font-size: 30px;
+				line-height: 36px;
+				margin-bottom: 32px;
+				@include media(s) {
+					font-size: 28px;
+					line-height: 32px;
+					margin-bottom: 24px;
+				}
+			}
+			a {
+				display: block;
+				@include text;
+				margin-bottom: 12px;
+				color: #1659a3;
+				text-decoration: none;
+				img {
+					margin-right: 12px;
+				}
+			}
+			&::before {
+				content: url("../assets/borda-ctt.png");
+				position: absolute;
+				left: -100px;
+				@include media(s) {
+					display: none;
+				}
+			}
+
+			.location_content {
+				max-width: 100%;
+				gap: 36px;
+				@include media(s) {
+					padding: 0;
+				}
+				.location_card {
+					max-width: 100%;
+					min-width: 100%;
+					@include media(s) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.page--contato {
+	.footer {
+		margin-top: 0;
+	}
+}
