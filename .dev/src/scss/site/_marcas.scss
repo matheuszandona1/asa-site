@@ -364,6 +364,12 @@
 					left: -150px;
 					right: 0;
 					margin: 0 auto;
+					&.invicto {
+						@include media(s) {
+							max-width: 160px;
+							top: -30 !important;
+						}
+					}
 					&.bemte {
 						@include media(s) {
 							max-width: 170px !important;
