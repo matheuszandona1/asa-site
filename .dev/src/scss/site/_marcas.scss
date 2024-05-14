@@ -12,7 +12,7 @@
 			height: 100vh;
 		}
 		&::before {
-			content: url("../assets/detalhes-marcas-bf.png");
+			content: url("../assets/detalhes-marcas-bf.png?as=webp");
 			position: absolute;
 			bottom: -80px;
 			left: -170px;
@@ -23,13 +23,13 @@
 				bottom: -10px;
 			}
 			@include media(s) {
-				content: url("../assets/alimentos-mobile-bf.png");
+				content: url("../assets/alimentos-mobile-bf.png?as=webp");
 				bottom: 40px !important;
 				z-index: 3;
 			}
 		}
 		&::after {
-			content: url("../assets/detalhes-marcas-af.png");
+			content: url("../assets/detalhes-marcas-af.png?as=webp");
 			position: absolute;
 			bottom: -80px;
 			right: 0px;
@@ -40,7 +40,7 @@
 				bottom: -10px;
 			}
 			@include media(s) {
-				content: url("../assets/alimentos-mobile.png");
+				content: url("../assets/alimentos-mobile.png?as=webp");
 				bottom: -22px !important;
 				z-index: 5;
 			}
@@ -123,16 +123,16 @@
 	}
 	&.higiene {
 		.hero {
-			background: url("../assets/fundo-marcas-hg.png");
+			background: url("../assets/fundo-marcas-hg.png?as=webp");
 			&::before {
-				content: url("../assets/detalhes-marcas-bf-hg.png");
+				content: url("../assets/detalhes-marcas-bf-hg.png?as=webp");
 				bottom: 0;
 				@include media(s) {
 					bottom: 60px !important;
 				}
 			}
 			&::after {
-				content: url("../assets/detalhes-marcas-af-hg.png");
+				content: url("../assets/detalhes-marcas-af-hg.png?as=webp");
 				bottom: -13px;
 				@include media(s) {
 					right: -289px;
@@ -165,7 +165,7 @@
 					content: url("../assets/curva-vd-hg.svg");
 				}
 				&::after {
-					content: url("../assets/flor.png");
+					content: url("../assets/flor.png?as=webp");
 				}
 			}
 		}
@@ -233,12 +233,12 @@
 	}
 	&.limpeza {
 		.hero {
-			background: url("../assets/fundo-marcas-lp.png");
+			background: url("../assets/fundo-marcas-lp.png?as=webp");
 			&::before {
-				content: url("../assets/detalhes-marcas-bf-lp.png");
+				content: url("../assets/detalhes-marcas-bf-lp.png?as=webp");
 			}
 			&::after {
-				content: url("../assets/detalhes-marcas-af-lp.png");
+				content: url("../assets/detalhes-marcas-af-lp.png?as=webp");
 				@include media(s) {
 					transform: scale(0.7);
 					right: -200px;
@@ -277,7 +277,7 @@
 					content: url("../assets/curva-vd-lp.svg");
 				}
 				&::after {
-					content: url("../assets/bolhas.png");
+					content: url("../assets/bolhas.png?as=webp");
 				}
 			}
 		}
@@ -505,7 +505,7 @@
 				margin-bottom: 40px;
 			}
 			&::before {
-				content: url("../assets/curva-vd.png");
+				content: url("../assets/curva-vd.png?as=webp");
 				position: absolute;
 				left: -35px;
 				bottom: 50px;
@@ -516,7 +516,7 @@
 				}
 			}
 			&::after {
-				content: url("../assets/quase-milho.png");
+				content: url("../assets/quase-milho.png?as=webp");
 				position: absolute;
 				right: -40px;
 				top: -50px;
@@ -581,7 +581,7 @@
 			padding: 0 24px;
 		}
 		&::before {
-			content: url("../assets/folha.png");
+			content: url("../assets/folha.png?as=webp");
 			position: absolute;
 			z-index: 1;
 			left: -50px;
@@ -593,7 +593,7 @@
 			}
 		}
 		&::after {
-			content: url("../assets/folha.png");
+			content: url("../assets/folha.png?as=webp");
 			position: absolute;
 			z-index: 1;
 			right: -50px;

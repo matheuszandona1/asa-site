@@ -6,7 +6,7 @@
 		padding-top: 120px;
 	}
 	&::before {
-		content: url("../assets/ctt-aft.png");
+		content: url("../assets/ctt-aft.png?as=webp");
 		position: absolute;
 		left: 0;
 		top: 100px;
@@ -115,7 +115,7 @@
 				}
 			}
 			&::before {
-				content: url("../assets/borda-ctt.png");
+				content: url("../assets/borda-ctt.png?as=webp");
 				position: absolute;
 				left: -100px;
 				@include media(s) {

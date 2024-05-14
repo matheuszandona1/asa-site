@@ -1,3 +1,48 @@
+.arrows.hero {
+	position: absolute;
+	z-index: 999;
+
+	max-width: 95%;
+	position: absolute;
+	height: 100px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 30%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	@media (min-width: 1600px) {
+		max-width: 95%;
+	}
+	@include media(s) {
+		max-width: 30%;
+		top: unset;
+		bottom: 100px;
+		right: 20px;
+		left: unset;
+	}
+
+	.prev,
+	.next {
+		position: absolute;
+		border: 1px solid #fff;
+		background-color: rgba(255, 255, 255, 0.1);
+		padding: 12px;
+		border-radius: 50%;
+		cursor: pointer;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		img {
+			max-width: 20px;
+		}
+	}
+	.next {
+		right: 0;
+	}
+}
+
 .hero {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -12,6 +57,49 @@
 	&.slider-home {
 		height: 100%;
 		padding-top: 0;
+		.slick-dots {
+			display: flex;
+			justify-content: center;
+
+			position: absolute;
+			padding: 0;
+			list-style-type: none;
+			max-width: 1200px;
+			margin: 0 auto;
+
+			width: 100%;
+			left: 0;
+			right: 0;
+
+			justify-content: center;
+			bottom: 12%;
+			gap: 10px;
+			@include media(s) {
+				bottom: unset;
+				top: 120px;
+				justify-content: center;
+			}
+			li {
+				margin: 0;
+			}
+
+			button {
+				display: block;
+				width: 70px;
+				height: 3px;
+				padding: 0;
+
+				border: none;
+				border-radius: 0;
+				background-color: rgba(255, 255, 255, 1);
+
+				text-indent: -9999px;
+			}
+
+			li.slick-active button {
+				background-color: #036cb5;
+			}
+		}
 		.slick-arrow {
 			display: none !important;
 		}
@@ -34,7 +122,6 @@
 			height: 90vh;
 			@media (min-width: 1800px) {
 				padding-top: 350px;
-				height: 85vh;
 			}
 			@media (min-width: 1440px) and (max-width: 1513px) {
 				padding-top: 310px;
